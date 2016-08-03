@@ -1,0 +1,24 @@
+//中文使用手机默认字体，英文使用helvetica，因为这个字体在ios，android，winphone上都有
+body {
+    font-family: Helvetica!important;
+    -webkit-text-size-adjust: 100%!important;//禁止调整ios字体大小
+    -webkit-overflow-scrolling: touch; //滚动流畅
+}
+// 禁止用户点击时产生半透明遮罩层
+a,
+button,
+input,
+textarea {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-modify: read-write-plaintext-only;
+}
+.css {
+    -webkit-touch-callout: none;//禁止ios&android长按时下载图片
+    -webkit-user-select:none;//禁止ios和android用户选中文字
+}
+//文字超出后出现...
+@mixin overStep {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
