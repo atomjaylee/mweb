@@ -64,7 +64,7 @@ gulp.task('sass',function() {
         .pipe(autoprefixer({
             browsers: ["Android 2.3", "iOS 7"]
         }))
-        .pipe(postcss(processors))
+        .pipe(postcss(processors))//切换成rem
         .pipe(concat('style.css'))
         .pipe(s)//计算最后文件的大小
         .pipe(minicss())
